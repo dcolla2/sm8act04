@@ -1,5 +1,5 @@
 <?php
-	$host="xxxxxxx";# Nom del contenidor amb el servidor MySQL
+	$host="xxxxxxx";
 	$user="xxxxxx";
 	$passwd="xxxxxx";
 	$bd="xxxxxx";

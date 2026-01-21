@@ -6,21 +6,16 @@ function sentencia_sql($taula){
 }
 
 function consulta($sql,$host,$bd,$user,$passwd){
-	try {
-		$connexio = new PDO("mysql:host=$host;dbname=$bd",$user,$passwd);
-		$connexio->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-		$connexio->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC); 	
-		$consulta = $connexio->prepare($sql);
-		$consulta->execute();
-		$resultat = $consulta->fetchAll();
-		$consulta=null;
-		$bd=null;
-    } catch (PDOException $e) {
-		print "Error!!! ".$e->getMessage()."<br>";
-		$consuta=null;
-		$bd=null;		
-		die();
+	$connexio = new mysqli($host,$user,$passwd,$bd);
+	if ($connexio->connect_errno){
+		printf("Problema de connexió a la BD: %s\n", $connexio->connect_error);
+		exit();
 	}
+	else {
+		echo "<b>Connexió a la BD  $bd realitzada amb èxit</b><br><br>";
+	}
+	$resultat = $connexio->query($sql) or die("Consulta fallida - Codi: ".$connexio->errno." -- Missatge d'error: ".$connexio->error);
+	$connexio->close();
     return $resultat;
 }
 
