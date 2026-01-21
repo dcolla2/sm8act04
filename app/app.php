@@ -2,11 +2,11 @@
 <html>
 	<head>
 		<meta content="text/html; charset=UTF-8" http-equiv="content-type">
-		<title>APLICACIÓ DE GESTIÓ D'USUARIS</title>
+		<title>APLICACIÓ DE GESTIÓ DE TREBALLADORS</title>
 		<link rel="stylesheet" href="app.css">	
 	</head>
 	<body>
-	<p>LLISTA D'USUARIS</p>
+	<p>LLISTA DE TREBALLADORS</p>
 	<ul>
 		<?php
 			require 'config.php';

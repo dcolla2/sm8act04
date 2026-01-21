@@ -1,14 +1,14 @@
-USE bdEmpresa;
+USE xxxxxxx;
 
-CREATE TABLE Treballadors (
+CREATE TABLE xxxxxx (
 	codi int UNSIGNED AUTO_INCREMENT,
 	nom VARCHAR(50) NOT NULL,
 	cognoms VARCHAR(100) NOT NULL,
 	email VARCHAR(100) NOT NULL,
-    PRIMARY KEY (codi)
+    PRIMARY KEY (xxxx)
 );
 
-INSERT INTO Treballadors (nom,cognoms,email) VALUES
+INSERT INTO xxxxxxx (nom,cognoms,email) VALUES
 ('paula', 'alonso pons', 'app@clot.com'),
 ('joan', 'pelayo rocamora', 'jrr@fje.net'),
 ('pere', 'masponts matadepera', 'pmm@daw2.com'),
